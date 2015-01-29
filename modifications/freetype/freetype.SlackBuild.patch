@@ -34,7 +34,7 @@
  rm -rf $PKG/usr/doc/freetype-$VERSION/docs/reference
  
 +# infinality-bundle
-+install -D -m0755 $INFINALITY_BUNDLE/generic_settings/infinality-settings.sh \
++install -D -m0755 $INFINALITY_BUNDLE/infinality-settings.sh \
 +  $PKG/etc/profile.d/infinality-settings.sh.new
 +
  mkdir $PKG/install
