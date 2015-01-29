@@ -43,5 +43,5 @@
  
  cd $PKG
 -/sbin/makepkg -l y -c n $TMP/freetype-$VERSION-$ARCH-$BUILD.txz
-+/sbin/makepkg -l y -c n $TMP/freetype-"$VERSION"_infinality-$ARCH-$BUILD.txz
++/sbin/makepkg -l y -c n $TMP/freetype-"$VERSION-$ARCH-$BUILD"_infinality.txz
  

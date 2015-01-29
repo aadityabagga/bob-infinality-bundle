@@ -1,5 +1,14 @@
---- source/x/fontconfig/fontconfig.SlackBuild	2013-05-19 06:01:14.000000000 +0530
-+++ source/x/fontconfig/fontconfig.SlackBuild.new	2015-01-18 15:14:46.461805510 +0530
+--- source/x/fontconfig/fontconfig.SlackBuild	2015-01-29 22:52:09.537989642 +0530
++++ source/x/fontconfig/fontconfig.SlackBuild.new	2015-01-29 22:54:13.139985990 +0530
+@@ -22,7 +22,7 @@
+ 
+ 
+ VERSION=${VERSION:-$(echo fontconfig-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
+-BUILD=${BUILD:-1}
++BUILD=${BUILD:-2}
+ 
+ # Automatically determine the architecture we're building on:
+ if [ -z "$ARCH" ]; then
 @@ -68,6 +68,17 @@
    \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
    -exec chmod 644 {} \;
@@ -39,7 +48,7 @@
    --with-baseconfigdir=/etc/fonts \
    --with-configdir=/etc/fonts/conf.d \
    --with-xmldir=/etc/fonts \
-@@ -178,6 +196,12 @@
+@@ -178,10 +196,16 @@
    )
  fi
  
@@ -52,3 +61,8 @@
  mkdir $PKG/install
  cat $CWD/slack-desc > $PKG/install/slack-desc
  zcat $CWD/doinst.sh.gz > $PKG/install/doinst.sh
+ 
+ cd $PKG
+-/sbin/makepkg -l y -c n --prepend $TMP/fontconfig-$VERSION-$ARCH-$BUILD.txz
++/sbin/makepkg -l y -c n --prepend $TMP/fontconfig-"$VERSION-$ARCH-$BUILD"_infinality.txz
+ 
