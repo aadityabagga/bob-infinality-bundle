@@ -24,6 +24,9 @@ fontconfig-infinality-ultimate."*
 
 3. Build and install the packages using `install.sh`
 
+   (I found that installing only the patched freetype (and not fontconfig or cairo)
+   produced the best result for me.
+
 ## Notes
 
 *  At this moment these SlackBuilds are from and for Slackware Linux 14.1
