@@ -17,13 +17,13 @@ fontconfig-infinality-ultimate."*
 
 1.  Clone this repository
 
-  ``` git clone https://github.com/nihilismus/bob-infinality-bundle```
+  ```git clone https://github.com/aadityabagga/bob-infinality-bundle```
 
 2. Download the sources using `bob-sources.sh`
 
 3. Build and install the packages using `install.sh`
 
-   (I found that installing the patched freetype and fontconfig was enough for my needs.)
+   (I found that installing the patched freetype and fontconfig was enough for my needs)
 
 ## Notes
 
