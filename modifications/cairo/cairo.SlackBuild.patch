@@ -1,5 +1,5 @@
---- source/l/cairo/cairo.SlackBuild	2013-02-21 04:22:19.000000000 +0530
-+++ source/l/cairo/cairo.SlackBuild.new	2015-01-18 13:48:24.038958000 +0530
+--- source/l/cairo/cairo.SlackBuild	2015-02-01 11:19:12.594137393 +0530
++++ source/l/cairo/cairo.SlackBuild.new	2015-02-01 11:23:00.374140939 +0530
 @@ -20,6 +20,7 @@
  #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
@@ -8,7 +8,7 @@
  
  PKGNAM=cairo
  VERSION=${VERSION:-$(echo $PKGNAM-*.tar.?z* | rev | cut -f 3- -d . | cut -f 1 -d - | rev)}
-@@ -68,6 +69,14 @@
+@@ -68,6 +69,14 @@ find . \
    \( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
    -exec chmod 644 {} \;
  
@@ -23,3 +23,10 @@
  CFLAGS="$SLKCFLAGS" \
  ./configure \
    --prefix=/usr \
+@@ -128,5 +137,5 @@ mkdir -p $PKG/install
+ cat $CWD/slack-desc > $PKG/install/slack-desc
+ 
+ cd $PKG
+-/sbin/makepkg -l y -c n $TMP/$PKGNAM-$VERSION-$ARCH-$BUILD.txz
++/sbin/makepkg -l y -c n $TMP/"$PKGNAM-$VERSION-$ARCH-$BUILD"_infinality.txz
+ 
