@@ -24,8 +24,7 @@ fontconfig-infinality-ultimate."*
 
 3. Build and install the packages using `install.sh`
 
-   (I found that installing only the patched freetype (and not fontconfig or cairo)
-   produced the best result for me.
+   (I found that installing the patched freetype and fontconfig was enough for my needs.)
 
 ## Notes
 
